@@ -50,4 +50,15 @@ Check that file has been processed and place in FieldStaffing\Backup folder
 
 Done.
 
+
+
+
+
+Testing Workflow
+
+Execute on 1665 Server: Run the stored procedure in SSMS on the 1665 server to generate HTML text output.
+Capture HTML Output: Copy the HTML text from the SSMS Results tab (via SELECT @html AS EmailBody) or Messages tab (via PRINT statements).
+Transfer to C27C Cat Server: Paste the HTML text into a testing script on the C27C cat server to generate and send the email.
+Validate Email Output: Compare the numerical values (e.g., weekly totals, averages, current week totals) in the emailed report with the corresponding data in the import_ams_new table to ensure accuracy.
+Performance Objective: Ensure the procedure executes quickly on the 1665 server to support efficient testing and validation.
  
